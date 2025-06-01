@@ -21,6 +21,9 @@ bool init_game_window(int width, int height, const char* title) {
     game_width = width;
     game_height = height;
 
+    // 调整终端字符编码为 UTF-8
+    system("chcp 65001");
+
     // 初始化随机数种子
     srand((unsigned int)time(NULL));
 
