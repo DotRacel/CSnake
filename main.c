@@ -4,7 +4,7 @@
 
 int main() {
     // 游戏配置
-    const int BOARD_WIDTH = 20;
+    const int BOARD_WIDTH = 50;
     const int BOARD_HEIGHT = 15;
     const int INITIAL_SNAKE_LENGTH = 3;
 
