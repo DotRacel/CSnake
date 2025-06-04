@@ -55,14 +55,14 @@ void clear_screen() {
     }
 }
 
-void draw_block(int x, int y, Symbol color) {
+void draw_block(int x, int y, Symbol symbol) {
     if (!game_initialized || x < 0 || x >= game_width || y < 0 || y >= game_height) {
         return;
     }
 
     // 根据颜色选择显示字符
     char block_char;
-    switch (color) {
+    switch (symbol) {
         case FOOD:    block_char = '#'; break;
         case SNAKE_HEAD:  block_char = 'O'; break;
         case SNAKE_BODY:   block_char = '@'; break;
@@ -90,10 +90,10 @@ void draw_food(int x, int y) {
     draw_block(x, y, FOOD);
 }
 
-void draw_score(int score, int high_score) {
+void draw_score(int score) {
     if (!game_initialized) return;
 
-    printf("分数: %d | 最高分: %d\n", score, high_score);
+    printf("分数: %d\n");
 }
 
 void refresh_screen(void) {
@@ -156,7 +156,7 @@ bool point_in_bounds(Point point, int width, int height) {
     return (point.x >= 0 && point.x < width && point.y >= 0 && point.y < height);
 }
 
-void init_snake(Snake* snake, int start_x, int start_y, int initial_length, Symbol color) {
+void init_snake(Snake* snake, int start_x, int start_y, int initial_length) {
     if (!snake || initial_length <= 0 || initial_length > MAX_SNAKE_LENGTH) return;
 
     snake->length = initial_length;

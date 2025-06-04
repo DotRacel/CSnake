@@ -51,9 +51,9 @@ void clear_screen();
 /**
  * 在指定位置绘制一个方块（用于食物、障碍物等）
  * @参数 x, y: 坐标位置
- * @参数 color: 方块颜色
+ * @参数 symbol: 方块符号
  */
-void draw_block(int x, int y, Symbol color);
+void draw_block(int x, int y, Symbol symbol);
 
 /**
  * 绘制整条蛇
@@ -64,16 +64,14 @@ void draw_snake(const Snake* snake);
 /**
  * 在指定位置绘制食物
  * @参数 x, y: 食物坐标
- * @参数 color: 食物颜色（默认可以是红色）
  */
 void draw_food(int x, int y);
 
 /**
  * 显示游戏分数
  * @参数 score: 当前分数
- * @参数 high_score: 最高分数
  */
-void draw_score(int score, int high_score);
+void draw_score(int score);
 
 /**
  * 刷新屏幕显示（双缓冲）
@@ -124,9 +122,8 @@ Point make_point(int x, int y);
  * @参数 snake: 蛇的结构体指针
  * @参数 start_x, start_y: 蛇头初始位置
  * @参数 initial_length: 蛇的初始长度
- * @参数 color: 蛇的颜色
  */
-void init_snake(Snake* snake, int start_x, int start_y, int initial_length, Symbol color);
+void init_snake(Snake* snake, int start_x, int start_y, int initial_length);
 
 /**
  * 根据方向移动蛇头

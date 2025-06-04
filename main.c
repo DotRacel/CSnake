@@ -21,14 +21,13 @@ int main() {
 
     // 初始化蛇
     Snake snake;
-    init_snake(&snake, BOARD_WIDTH/2, BOARD_HEIGHT/2, INITIAL_SNAKE_LENGTH, SNAKE_HEAD);
+    init_snake(&snake, BOARD_WIDTH/2, BOARD_HEIGHT/2, INITIAL_SNAKE_LENGTH);
 
     // 生成第一个食物
     Point food = generate_food(BOARD_WIDTH, BOARD_HEIGHT, &snake);
 
     // 游戏状态
     int score = 0;
-    int high_score = 0;
     bool game_running = true;
 
     // 游戏主循环
@@ -79,8 +78,7 @@ int main() {
         refresh_screen();
 
         // 显示分数
-        if (score > high_score) high_score = score;
-        draw_score(score, high_score);
+        draw_score(score);
 
         // 控制游戏速度
         game_delay(200);
