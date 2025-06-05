@@ -1,6 +1,4 @@
 #include "snake_graphics.h"
-#include <conio.h>
-#include <stdio.h>
 
 int main() {
     // 游戏配置

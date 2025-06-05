@@ -1,6 +1,13 @@
 #ifndef SNAKE_GRAPHICS_H
 #define SNAKE_GRAPHICS_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <windows.h>
+#include <conio.h>
+
 // 游戏配置常量
 #define MAX_SNAKE_LENGTH 1000
 #define MIN_BOARD_SIZE 10

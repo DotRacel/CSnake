@@ -1,10 +1,5 @@
 #include "snake_graphics.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <windows.h>
-#include <conio.h>
+
 
 static int game_width = 0;
 static int game_height = 0;
