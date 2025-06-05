@@ -88,7 +88,7 @@ void draw_food(int x, int y) {
 void draw_score(int score) {
     if (!game_initialized) return;
 
-    printf("分数: %d\n");
+    printf("分数: %d\n", score);
 }
 
 void refresh_screen(void) {
