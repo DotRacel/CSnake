@@ -7,6 +7,7 @@
 #include <time.h>
 #include <windows.h>
 #include <conio.h>
+#include <stdbool.h>
 
 // 游戏配置常量
 #define MAX_SNAKE_LENGTH 1000
